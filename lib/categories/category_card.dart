@@ -1,27 +1,42 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_playground/checklist/checklist_page.dart';
 
-class TypeCard extends StatelessWidget {
-  final String cardTitle;
+class CategoryCard extends StatelessWidget {
+  final String title;
   final String backgroundImageUrl;
 
-  const TypeCard({
+  const CategoryCard({
     Key? key,
-    required this.cardTitle,
+    required this.title,
     required this.backgroundImageUrl,
   }) : super(key: key);
 
+  void selectCategory(BuildContext ctx) {
+    Navigator.of(ctx).push(
+      MaterialPageRoute(
+        builder: (_) {
+          return const ChecklistPage();
+        },
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Card(
-      clipBehavior: Clip.antiAlias,
-      child: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            fit: BoxFit.cover,
-            image: AssetImage(backgroundImageUrl),
+    return InkWell(
+      onTap: () => selectCategory(context),
+      splashColor: Theme.of(context).primaryColor,
+      // borderRadius: BorderRadius.circular(15),
+      child: Card(
+        clipBehavior: Clip.antiAlias,
+        child: Container(
+          decoration: BoxDecoration(
+            // borderRadius: BorderRadius.circular(15),
+            image: DecorationImage(
+              fit: BoxFit.cover,
+              image: AssetImage(backgroundImageUrl),
+            ),
           ),
-        ),
-        child: Flexible(
           child: Align(
             alignment: Alignment.bottomCenter,
             child: FractionallySizedBox(
@@ -34,7 +49,7 @@ class TypeCard extends StatelessWidget {
                 height: 5,
                 child: Center(
                   child: Text(
-                    cardTitle,
+                    title,
                     style: const TextStyle(
                       color: Colors.white,
                       overflow: TextOverflow.ellipsis,
