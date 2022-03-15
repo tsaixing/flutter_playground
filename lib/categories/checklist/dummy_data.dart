@@ -1,27 +1,27 @@
-import 'checklist_model.dart';
+import 'package:flutter_playground/models/checklist_item.dart';
 
 const DUMMY_CHECKLIST = [
-  Checklist(
+  ChecklistItem(
     id: 'c1',
     label: 'milk',
   ),
-  Checklist(
+  ChecklistItem(
     id: 'c2',
     label: 'eggs',
   ),
-  Checklist(
+  ChecklistItem(
     id: 'c3',
     label: 'pizza',
   ),
-  Checklist(
+  ChecklistItem(
     id: 'c4',
     label: 'dumplings',
   ),
-  Checklist(
+  ChecklistItem(
     id: 'c5',
     label: 'lettuce',
   ),
-  Checklist(
+  ChecklistItem(
     id: 'c6',
     label: 'yams',
   ),

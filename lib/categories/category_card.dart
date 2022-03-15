@@ -1,24 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_playground/checklist/checklist_page.dart';
+import 'package:flutter_playground/categories/checklist/checklist_page.dart';
 
 class CategoryCard extends StatelessWidget {
   final String title;
+  final String description;
   final String backgroundImageUrl;
 
   const CategoryCard({
     Key? key,
     required this.title,
     required this.backgroundImageUrl,
+    this.description = "",
   }) : super(key: key);
 
   void selectCategory(BuildContext ctx) {
-    Navigator.of(ctx).push(
-      MaterialPageRoute(
-        builder: (_) {
-          return const ChecklistPage();
-        },
-      ),
-    );
+    Navigator.of(ctx).pushNamed(ChecklistPage.routeName, arguments: {
+      'title': title,
+      'description': description,
+      'backgroundImageUrl': backgroundImageUrl,
+    });
   }
 
   @override

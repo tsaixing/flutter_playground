@@ -20,7 +20,10 @@ class CategoryPage extends StatelessWidget {
           childAspectRatio: 1 / 1,
           children: DUMMY_CATEGORIES
               .map((data) => CategoryCard(
-                  title: data.title, backgroundImageUrl: data.imageUrl))
+                    title: data.title,
+                    backgroundImageUrl: data.imageUrl,
+                    description: data.description,
+                  ))
               .toList()),
     );
   }

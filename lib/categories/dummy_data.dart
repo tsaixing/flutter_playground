@@ -1,9 +1,10 @@
-import 'category_model.dart';
+import 'package:flutter_playground/models/category.dart';
 
 const DUMMY_CATEGORIES = [
   Category(
     id: 'c1',
     title: 'Groceries',
+    description: 'For meal prepping during the week :)',
     imageUrl: 'assets/images/groceries.jpeg',
   ),
   Category(
