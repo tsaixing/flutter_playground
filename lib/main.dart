@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_playground/categories/checklist/checklist_item/item_detail_page.dart';
-import 'package:flutter_playground/categories/checklist/checklist_page.dart';
+import 'package:flutter_playground/screens/checklist_item_screen.dart';
+import 'package:flutter_playground/screens/checklist_screen.dart';
 
-import './categories/category_page.dart';
+import 'screens/category_screen.dart';
 
 void main() => runApp(const SharedList());
 
@@ -16,10 +16,10 @@ class SharedList extends StatelessWidget {
       theme: ThemeData(
         fontFamily: 'Quicksand',
       ),
-      home: const CategoryPage(),
+      home: const CategoryScreen(),
       routes: {
-        ChecklistPage.routeName: (ctx) => const ChecklistPage(),
-        ItemDetailPage.routeName: (ctx) => const ItemDetailPage(),
+        ChecklistScreen.routeName: (ctx) => const ChecklistScreen(),
+        ChecklistItemScreen.routeName: (ctx) => const ChecklistItemScreen(),
       },
     );
   }

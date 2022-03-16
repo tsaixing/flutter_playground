@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_playground/categories/checklist/checklist_page.dart';
+import 'package:flutter_playground/screens/checklist_screen.dart';
 
 class CategoryCard extends StatelessWidget {
   final String title;
@@ -14,7 +14,7 @@ class CategoryCard extends StatelessWidget {
   }) : super(key: key);
 
   void selectCategory(BuildContext ctx) {
-    Navigator.of(ctx).pushNamed(ChecklistPage.routeName, arguments: {
+    Navigator.of(ctx).pushNamed(ChecklistScreen.routeName, arguments: {
       'title': title,
       'description': description,
       'backgroundImageUrl': backgroundImageUrl,

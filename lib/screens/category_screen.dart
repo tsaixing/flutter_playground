@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_playground/categories/dummy_data.dart';
+import 'package:flutter_playground/temp_data/categories.dart';
 
-import './category_card.dart';
+import '../widgets/category_card.dart';
 
-class CategoryPage extends StatelessWidget {
-  const CategoryPage({
+class CategoryScreen extends StatelessWidget {
+  const CategoryScreen({
     Key? key,
   }) : super(key: key);
 

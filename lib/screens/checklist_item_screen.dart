@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 
-class ItemDetailPage extends StatefulWidget {
+class ChecklistItemScreen extends StatefulWidget {
   static const routeName = '/item';
 
-  const ItemDetailPage({
+  const ChecklistItemScreen({
     Key? key,
   }) : super(key: key);
 
   @override
-  State<ItemDetailPage> createState() => _ItemDetailPageState();
+  State<ChecklistItemScreen> createState() => _ChecklistItemScreenState();
 }
 
-class _ItemDetailPageState extends State<ItemDetailPage> {
+class _ChecklistItemScreenState extends State<ChecklistItemScreen> {
   @override
   Widget build(BuildContext context) {
     final routeArgs =

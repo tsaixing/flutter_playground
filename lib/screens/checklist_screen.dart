@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_playground/categories/checklist/dummy_data.dart';
+import 'package:flutter_playground/temp_data/checklist.dart';
 
-class ChecklistPage extends StatefulWidget {
+class ChecklistScreen extends StatefulWidget {
   static const routeName = '/checklist';
 
-  const ChecklistPage({
+  const ChecklistScreen({
     Key? key,
   }) : super(key: key);
 
   @override
-  State<ChecklistPage> createState() => _ChecklistPageState();
+  State<ChecklistScreen> createState() => _ChecklistScreenState();
 }
 
-class _ChecklistPageState extends State<ChecklistPage> {
+class _ChecklistScreenState extends State<ChecklistScreen> {
   final _items = DUMMY_CHECKLIST.toList();
 
   @override
