@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "821363705771",
+    "project_id": "dreamteam-a6c08",
+    "storage_bucket": "dreamteam-a6c08.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:821363705771:android:5294e5837eaa0d781334ee",
+        "android_client_info": {
+          "package_name": "com.tsaixing.dreamteam"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "821363705771-4ocengo44p48n3qlkpn4tnt4g76hup34.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2Osc857JZEtj1NdMDgygX_2gdUnfjv5w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "821363705771-4ocengo44p48n3qlkpn4tnt4g76hup34.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
