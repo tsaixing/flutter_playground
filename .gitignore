@@ -9,6 +9,10 @@
 .history
 .svn/
 
+# Google services
+google-services.json
+GoogleService-Info.plist
+
 # IntelliJ related
 *.iml
 *.ipr

@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "821363705771-en3bip61uh7nsubb2dgmco1pmus1to4s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tsaixing.dreamteam",
+            "certificate_hash": "013363370803efa25d2fe90ef7285f484d967274"
+          }
+        },
+        {
           "client_id": "821363705771-4ocengo44p48n3qlkpn4tnt4g76hup34.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,6 +37,13 @@
             {
               "client_id": "821363705771-4ocengo44p48n3qlkpn4tnt4g76hup34.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "821363705771-0utkajlee70rshqg8hbtsdp4ceg7lgfa.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.tsaixing.dreamteam"
+              }
             }
           ]
         }

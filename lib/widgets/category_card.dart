@@ -13,8 +13,8 @@ class CategoryCard extends StatelessWidget {
     this.description = "",
   }) : super(key: key);
 
-  void selectCategory(BuildContext ctx) {
-    Navigator.of(ctx).pushNamed(ChecklistScreen.routeName, arguments: {
+  void selectCategory(BuildContext context) {
+    Navigator.of(context).pushNamed(ChecklistScreen.routeName, arguments: {
       'title': title,
       'description': description,
       'backgroundImageUrl': backgroundImageUrl,
