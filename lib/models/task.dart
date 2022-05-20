@@ -1,10 +1,10 @@
-class ChecklistItem {
+class Task {
   final String id;
   final String label;
   final String description;
   // final List<Image> imageList;
 
-  const ChecklistItem({
+  const Task({
     required this.id,
     required this.label,
     this.description = "",

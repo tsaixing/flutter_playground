@@ -30,7 +30,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
+                  children: const [
                     // Flexible(
                     //   flex: 1,
                     //   child: Image.asset(
@@ -38,7 +38,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     //     height: 160,
                     //   ),
                     // ),
-                    const SizedBox(height: 20),
+                    SizedBox(height: 20),
                     Text(
                       'FlutterFire',
                       style: TextStyle(

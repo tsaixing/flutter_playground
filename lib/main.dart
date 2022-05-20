@@ -18,7 +18,7 @@ class SharedList extends StatelessWidget {
       ),
       home: const LoginScreen(),
       routes: {
-        CategoryScreen.routeName: (context) => const CategoryScreen(),
+        RoomScreen.routeName: (context) => const RoomScreen(),
         ChecklistScreen.routeName: (context) => const ChecklistScreen(),
         ChecklistItemScreen.routeName: (context) => const ChecklistItemScreen(),
       },

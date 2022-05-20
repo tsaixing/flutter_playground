@@ -14,7 +14,7 @@ class Authentication {
     User? user = FirebaseAuth.instance.currentUser;
 
     if (user != null) {
-      Navigator.of(context).pushNamed(CategoryScreen.routeName, arguments: {
+      Navigator.of(context).pushNamed(RoomScreen.routeName, arguments: {
         'title': "test",
         'description': "desc",
         'backgroundImageUrl': "bgImg",

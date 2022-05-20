@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_playground/screens/checklist_screen.dart';
 
-class CategoryCard extends StatelessWidget {
+class RoomCard extends StatelessWidget {
   final String title;
   final String description;
   final String backgroundImageUrl;
 
-  const CategoryCard({
+  const RoomCard({
     Key? key,
     required this.title,
     required this.backgroundImageUrl,
