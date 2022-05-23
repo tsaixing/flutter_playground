@@ -13,7 +13,7 @@ class RoomCard extends StatelessWidget {
     this.description = "",
   }) : super(key: key);
 
-  void selectCategory(BuildContext context) {
+  void selectRoom(BuildContext context) {
     Navigator.of(context).pushNamed(ChecklistScreen.routeName, arguments: {
       'title': title,
       'description': description,
@@ -24,7 +24,7 @@ class RoomCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () => selectCategory(context),
+      onTap: () => selectRoom(context),
       splashColor: Theme.of(context).primaryColor,
       // borderRadius: BorderRadius.circular(15),
       child: Card(

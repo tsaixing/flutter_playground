@@ -1,20 +1,22 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_playground/widgets/add_room_button.dart';
 import 'package:flutter_playground/widgets/room_card.dart';
+import 'package:flutter_playground/widgets/settings_button.dart';
 
 class RoomScreen extends StatefulWidget {
-  static const routeName = '/category';
+  static const routeName = '/room';
 
   const RoomScreen({
     Key? key,
   }) : super(key: key);
 
   @override
-  State<RoomScreen> createState() => _CategoryScreen();
+  State<RoomScreen> createState() => _RoomScreen();
 }
 
-class _CategoryScreen extends State<RoomScreen> {
+class _RoomScreen extends State<RoomScreen> {
   // final _items = DUMMY_CHECKLIST.toList();
 
   @override
@@ -26,12 +28,16 @@ class _CategoryScreen extends State<RoomScreen> {
     // final String backgroundImageUrl = routeArgs['backgroundImageUrl']!;
 
     return Scaffold(
-        appBar: AppBar(title: const Text('Categories')), body: fetchRooms());
+        appBar: AppBar(
+          title: const Text('Rooms'),
+          actions: const <Widget>[AddRoomButton(), SettingsButton()],
+        ),
+        body: fetchRooms());
   }
 
   StreamBuilder fetchRooms() {
-    return StreamBuilder(
-        stream: FirebaseFirestore.instance.collection("categories").snapshots(),
+    return StreamBuilder<QuerySnapshot>(
+        stream: FirebaseFirestore.instance.collection('rooms').snapshots(),
         builder: (context, snapshot) {
           if (snapshot.hasError) {
             return const Text('Something went wrong!');
@@ -50,10 +56,11 @@ class _CategoryScreen extends State<RoomScreen> {
                 ...snapshot.data!.docs.map((DocumentSnapshot document) {
                   Map<String, dynamic> data =
                       document.data()! as Map<String, dynamic>;
+
                   return RoomCard(
-                    title: data['title'],
-                    backgroundImageUrl: data['imageUrl'],
-                    description: data['description'],
+                    title: data['title'] ?? '',
+                    backgroundImageUrl: data['imageUrl'] ?? '',
+                    description: data['description'] ?? '',
                   );
                 }).toList(),
               ],

@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 
-class ChecklistItemScreen extends StatefulWidget {
-  static const routeName = '/item';
+class TaskScreen extends StatefulWidget {
+  static const routeName = '/task';
 
-  const ChecklistItemScreen({
+  const TaskScreen({
     Key? key,
   }) : super(key: key);
 
   @override
-  State<ChecklistItemScreen> createState() => _ChecklistItemScreenState();
+  State<TaskScreen> createState() => _TaskScreenState();
 }
 
-class _ChecklistItemScreenState extends State<ChecklistItemScreen> {
+class _TaskScreenState extends State<TaskScreen> {
   @override
   Widget build(BuildContext context) {
     final routeArgs =

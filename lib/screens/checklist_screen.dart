@@ -26,9 +26,15 @@ class _ChecklistScreenState extends State<ChecklistScreen> {
     return Scaffold(
         appBar: AppBar(
           title: Text(title),
-          flexibleSpace: Image(
-            image: AssetImage(backgroundImageUrl),
-            fit: BoxFit.cover,
+          flexibleSpace: Container(
+            decoration: BoxDecoration(
+              color: Colors.black,
+              image: DecorationImage(
+                  fit: BoxFit.cover,
+                  colorFilter: ColorFilter.mode(
+                      Colors.black.withOpacity(0.5), BlendMode.dstATop),
+                  image: AssetImage(backgroundImageUrl)),
+            ),
           ),
         ),
         body: ReorderableListView(

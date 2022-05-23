@@ -2,7 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
-import 'package:flutter_playground/screens/category_screen.dart';
+import 'package:flutter_playground/screens/room_screen.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 class Authentication {
