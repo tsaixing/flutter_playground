@@ -15,7 +15,7 @@ class _SettingsButtonState extends State<SettingsButton> {
     User? auth = FirebaseAuth.instance.currentUser;
 
     return Padding(
-      padding: const EdgeInsets.only(bottom: 16.0),
+      padding: const EdgeInsets.all(5),
       child: auth == null
           ? IconButton(
               icon: const Icon(Icons.face_outlined),

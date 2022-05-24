@@ -25,4 +25,44 @@ const DUMMY_CHECKLIST = [
     id: 'c6',
     label: 'yams',
   ),
+  Task(
+    id: 'c7',
+    label: 'yams',
+  ),
+  Task(
+    id: 'c8',
+    label: 'yams',
+  ),
+  Task(
+    id: 'c9',
+    label: 'yams',
+  ),
+  Task(
+    id: 'c10',
+    label: 'yams',
+  ),
+  Task(
+    id: 'c11',
+    label: 'yams',
+  ),
+  Task(
+    id: 'c12',
+    label: 'pizza',
+  ),
+  Task(
+    id: 'c13',
+    label: 'pizza',
+  ),
+  Task(
+    id: 'c14',
+    label: 'pizza',
+  ),
+  Task(
+    id: 'c15',
+    label: 'pizza',
+  ),
+  Task(
+    id: 'c16',
+    label: 'pizza',
+  ),
 ];

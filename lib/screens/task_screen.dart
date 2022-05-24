@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
 class TaskScreen extends StatefulWidget {
@@ -16,18 +17,37 @@ class _TaskScreenState extends State<TaskScreen> {
   Widget build(BuildContext context) {
     final routeArgs =
         ModalRoute.of(context)?.settings.arguments as Map<String, String>;
-    final String title = routeArgs['title']!;
-    // final String description = routeArgs['description']!;
+    final String taskId = routeArgs['id']!;
+    final String parentTitle = routeArgs['parentTitle']!;
+    final String taskTitle = routeArgs['taskTitle']!;
     final String backgroundImageUrl = routeArgs['backgroundImageUrl']!;
 
     return Scaffold(
-        appBar: AppBar(
-          title: Text(title),
-          flexibleSpace: Image(
-            image: AssetImage(backgroundImageUrl),
-            fit: BoxFit.cover,
-          ),
+      appBar: AppBar(
+        title: Text(parentTitle + ": " + taskTitle),
+        flexibleSpace: Image(
+          image: AssetImage(backgroundImageUrl),
+          fit: BoxFit.cover,
         ),
-        body: Container());
+      ),
+      body: fetchTask(taskId),
+    );
+  }
+
+  StreamBuilder fetchTask(String taskId) {
+    return StreamBuilder<QuerySnapshot>(
+      stream: FirebaseFirestore.instance.collection('tasks').snapshots(),
+      builder: (context, snapshot) {
+        if (snapshot.hasError) {
+          return const Text('Something went wrong!');
+        }
+
+        if (!snapshot.hasData) {
+          return const CircularProgressIndicator();
+        } else {
+          return Container(); // TODO implement list of images to view, and notes
+        }
+      },
+    );
   }
 }

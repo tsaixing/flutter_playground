@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_playground/services/authentication.dart';
 import 'package:flutter_playground/widgets/google_sign_in_button.dart';

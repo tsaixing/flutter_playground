@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_playground/screens/checklist_screen.dart';
+import 'package:flutter_playground/screens/room_screen.dart';
 
 class RoomCard extends StatelessWidget {
   final String title;
@@ -12,14 +12,6 @@ class RoomCard extends StatelessWidget {
     required this.backgroundImageUrl,
     this.description = "",
   }) : super(key: key);
-
-  void selectRoom(BuildContext context) {
-    Navigator.of(context).pushNamed(ChecklistScreen.routeName, arguments: {
-      'title': title,
-      'description': description,
-      'backgroundImageUrl': backgroundImageUrl,
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -52,6 +44,7 @@ class RoomCard extends StatelessWidget {
                     title,
                     style: const TextStyle(
                       color: Colors.white,
+                      fontSize: 18,
                       overflow: TextOverflow.ellipsis,
                     ),
                     textAlign: TextAlign.left,
@@ -63,5 +56,13 @@ class RoomCard extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  void selectRoom(BuildContext context) {
+    Navigator.of(context).pushNamed(RoomScreen.routeName, arguments: {
+      'title': title,
+      'description': description,
+      'backgroundImageUrl': backgroundImageUrl,
+    });
   }
 }

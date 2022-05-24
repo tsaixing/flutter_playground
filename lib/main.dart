@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_playground/screens/add_room_screen.dart';
-import 'package:flutter_playground/screens/checklist_screen.dart';
+import 'package:flutter_playground/screens/edit_room_screen.dart';
+import 'package:flutter_playground/screens/home_screen.dart';
 import 'package:flutter_playground/screens/login_screen.dart';
 import 'package:flutter_playground/screens/room_screen.dart';
 import 'package:flutter_playground/screens/settings_screen.dart';
@@ -16,15 +17,19 @@ class SharedList extends StatelessWidget {
     return MaterialApp(
       title: "Shared List",
       theme: ThemeData(
+        appBarTheme: const AppBarTheme(
+          color: Color(0xFF151026),
+        ),
         fontFamily: 'Quicksand',
       ),
       home: const LoginScreen(),
       routes: {
         SettingsScreen.routeName: (context) => const SettingsScreen(),
+        HomeScreen.routeName: (context) => const HomeScreen(),
         RoomScreen.routeName: (context) => const RoomScreen(),
-        ChecklistScreen.routeName: (context) => const ChecklistScreen(),
         TaskScreen.routeName: (context) => const TaskScreen(),
-        AddRoomScreen.routeName: (context) => const AddRoomScreen()
+        AddRoomScreen.routeName: (context) => const AddRoomScreen(),
+        EditRoomScreen.routeName: (context) => const EditRoomScreen(),
       },
     );
   }
