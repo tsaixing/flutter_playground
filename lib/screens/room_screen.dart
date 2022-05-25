@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_playground/screens/edit_room_screen.dart';
 import 'package:flutter_playground/screens/task_screen.dart';
 import 'package:flutter_playground/temp_data/checklist.dart';
+import 'package:flutter_playground/widgets/buttons/quick_note_button.dart';
 
 class RoomScreen extends StatefulWidget {
   static const routeName = '/checklist';
@@ -34,6 +35,8 @@ class _RoomScreenState extends State<RoomScreen> {
           buildSliverReorderableList(title, backgroundImageUrl)
         ],
       ),
+      floatingActionButton: const QuickNoteButton(showRoomSelectDropdown: false),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }
 
@@ -105,7 +108,7 @@ class _RoomScreenState extends State<RoomScreen> {
 
         return Dismissible(
           key: ValueKey(task.id),
-          onDismissed: (direction) {
+          confirmDismiss: (direction) async {
             // Swiped to the left
             if (direction == DismissDirection.startToEnd) {
               setState(() {
@@ -114,16 +117,20 @@ class _RoomScreenState extends State<RoomScreen> {
 
               ScaffoldMessenger.of(context).showSnackBar(
                   SnackBar(content: Text('$taskName completed!')));
+
+              return true;
             }
 
             // Swiped to the right
-            if (direction == DismissDirection.endToStart) {
+            else if (direction == DismissDirection.endToStart) {
               Navigator.of(context).pushNamed(TaskScreen.routeName, arguments: {
                 'id': task.id,
                 'parentTitle': title,
                 'taskTitle': task.label,
                 'backgroundImageUrl': backgroundImageUrl,
               });
+
+              return false;
             }
           },
           background: Container(

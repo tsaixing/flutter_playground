@@ -3,8 +3,8 @@ import 'package:flutter_playground/screens/room_screen.dart';
 
 class RoomCard extends StatelessWidget {
   final String title;
-  final String description;
   final String backgroundImageUrl;
+  final String description;
 
   const RoomCard({
     Key? key,
@@ -35,8 +35,9 @@ class RoomCard extends StatelessWidget {
               widthFactor: 1,
               heightFactor: .3,
               child: Container(
-                decoration:
-                    BoxDecoration(color: Colors.black.withOpacity(0.55)),
+                decoration: BoxDecoration(
+                  color: Colors.black.withOpacity(0.55),
+                ),
                 // width: double.infinity,
                 height: 5,
                 child: Center(

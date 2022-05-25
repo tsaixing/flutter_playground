@@ -1,7 +1,6 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_playground/widgets/add_room_button.dart';
-import 'package:flutter_playground/widgets/settings_button.dart';
+import 'package:flutter_playground/widgets/buttons/add_room_button.dart';
+import 'package:flutter_playground/widgets/buttons/settings_button.dart';
 
 class SettingsScreen extends StatefulWidget {
   static const routeName = '/settings';

@@ -40,7 +40,7 @@ class _EditRoomScreen extends State<EditRoomScreen> {
 
     return Scaffold(
         appBar: AppBar(
-          title: Text('Edit Room'),
+          title: const Text('Edit Room'),
           flexibleSpace: Container(
             decoration: BoxDecoration(
               color: Colors.black,

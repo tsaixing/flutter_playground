@@ -25,9 +25,15 @@ class _TaskScreenState extends State<TaskScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text(parentTitle + ": " + taskTitle),
-        flexibleSpace: Image(
-          image: AssetImage(backgroundImageUrl),
-          fit: BoxFit.cover,
+        flexibleSpace: Container(
+          decoration: BoxDecoration(
+            color: Colors.black,
+            image: DecorationImage(
+                fit: BoxFit.cover,
+                colorFilter: ColorFilter.mode(
+                    Colors.black.withOpacity(0.5), BlendMode.dstATop),
+                image: AssetImage(backgroundImageUrl)),
+          ),
         ),
       ),
       body: fetchTask(taskId),

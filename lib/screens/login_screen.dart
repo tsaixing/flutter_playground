@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_playground/services/authentication.dart';
-import 'package:flutter_playground/widgets/google_sign_in_button.dart';
+import 'package:flutter_playground/widgets/buttons/google_sign_in_button.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);

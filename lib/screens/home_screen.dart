@@ -1,8 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_playground/widgets/add_room_button.dart';
-import 'package:flutter_playground/widgets/room_card.dart';
-import 'package:flutter_playground/widgets/settings_button.dart';
+import 'package:flutter_playground/widgets/buttons/add_room_button.dart';
+import 'package:flutter_playground/widgets/buttons/quick_note_button.dart';
+import 'package:flutter_playground/widgets/buttons/room_card.dart';
+import 'package:flutter_playground/widgets/buttons/settings_button.dart';
 
 class HomeScreen extends StatefulWidget {
   static const routeName = '/room';
@@ -16,22 +17,16 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreen extends State<HomeScreen> {
-  // final _items = DUMMY_CHECKLIST.toList();
-
   @override
   Widget build(BuildContext context) {
-    // final routeArgs =
-    //     ModalRoute.of(context)?.settings.arguments as Map<String, String>;
-    // final String title = routeArgs['title']!;≠
-    // final String description = routeArgs['description']!;
-    // final String backgroundImageUrl = routeArgs['backgroundImageUrl']!;
-
     return Scaffold(
       appBar: AppBar(
         title: const Text('Rooms'),
         actions: const <Widget>[AddRoomButton(), SettingsButton()],
       ),
       body: fetchRooms(),
+      floatingActionButton: const QuickNoteButton(),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }
 
