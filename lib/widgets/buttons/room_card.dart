@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_playground/screens/room_screen.dart';
+import 'package:flutter_playground/screens/room/room_screen.dart';
 
 class RoomCard extends StatelessWidget {
   final String title;

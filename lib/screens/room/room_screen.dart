@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_playground/screens/edit_room_screen.dart';
-import 'package:flutter_playground/screens/task_screen.dart';
+import 'package:flutter_playground/screens/room/edit_room_screen.dart';
+import 'package:flutter_playground/screens/task/task_screen.dart';
 import 'package:flutter_playground/temp_data/checklist.dart';
 import 'package:flutter_playground/widgets/buttons/quick_note_button.dart';
 
@@ -35,7 +35,8 @@ class _RoomScreenState extends State<RoomScreen> {
           buildSliverReorderableList(title, backgroundImageUrl)
         ],
       ),
-      floatingActionButton: const QuickNoteButton(showRoomSelectDropdown: false),
+      floatingActionButton:
+          const QuickNoteButton(showRoomSelectDropdown: false),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }
@@ -162,7 +163,7 @@ class _RoomScreenState extends State<RoomScreen> {
     );
   }
 
-  undoButton() {
+  IconButton undoButton() {
     return IconButton(
       icon: const Icon(Icons.undo_outlined),
       tooltip: 'Undo Last Action',
@@ -172,7 +173,7 @@ class _RoomScreenState extends State<RoomScreen> {
     );
   }
 
-  editButton() {
+  IconButton editButton() {
     return IconButton(
       icon: const Icon(Icons.edit),
       tooltip: 'Edit',

@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_playground/screens/add_room_screen.dart';
-import 'package:flutter_playground/screens/edit_room_screen.dart';
 import 'package:flutter_playground/screens/home_screen.dart';
 import 'package:flutter_playground/screens/login_screen.dart';
-import 'package:flutter_playground/screens/room_screen.dart';
+import 'package:flutter_playground/screens/room/add_room_screen.dart';
+import 'package:flutter_playground/screens/room/edit_room_screen.dart';
+import 'package:flutter_playground/screens/room/room_screen.dart';
 import 'package:flutter_playground/screens/settings_screen.dart';
-import 'package:flutter_playground/screens/task_screen.dart';
+import 'package:flutter_playground/screens/task/edit_task_screen.dart';
+import 'package:flutter_playground/screens/task/task_screen.dart';
 
 main() => runApp(const SharedList());
 
@@ -26,10 +27,15 @@ class SharedList extends StatelessWidget {
       routes: {
         SettingsScreen.routeName: (context) => const SettingsScreen(),
         HomeScreen.routeName: (context) => const HomeScreen(),
+
+        // Room
         RoomScreen.routeName: (context) => const RoomScreen(),
-        TaskScreen.routeName: (context) => const TaskScreen(),
         AddRoomScreen.routeName: (context) => const AddRoomScreen(),
         EditRoomScreen.routeName: (context) => const EditRoomScreen(),
+
+        // Task
+        TaskScreen.routeName: (context) => const TaskScreen(),
+        EditTaskScreen.routeName: (context) => const EditTaskScreen(),
       },
     );
   }

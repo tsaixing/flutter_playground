@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_playground/screens/add_room_screen.dart';
+import 'package:flutter_playground/screens/room/add_room_screen.dart';
 
 class AddRoomButton extends StatefulWidget {
   const AddRoomButton({Key? key}) : super(key: key);
